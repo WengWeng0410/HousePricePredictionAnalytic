@@ -156,18 +156,11 @@ Three models have been selected:
 
 ## Performane Evaluation
 
-For LinearRegression: <br>
-Coefficients [basement,sqft_living,grade, sqft_above, sqft_living15,bathrooms,view,lat,waterfront,yr_built,bedrooms,renovated,long,zipcode,condition] and Intercept produced by the model. <br>
-
-Coefficients: [  259.83736925   322.61300185 23827.39344353]<br>
-Intercept: -11691.638457668056 <br>
-
-From the coefficient, it can be seen that encoded_smoker is with the highest weight in determining the medical cost (charges) of a patient. <br> 
-
 Based on the result, the performance of <br> 
 Linear Regression is with the R_ Square score of **69.13%**. <br>
 Random Forest Regressor is with the R_ Square score of **88.80%**. <br>
-XGBoost Regressor is with the R_ Square score of **89.27%**.
+XGBoost Regressor is with the R_ Square score of **89.27%**. <br>
 
+The R_Squared value of XGBoost Regressor gives the best performance, followed by Random Forest Regressor and Linear Regression.
 
 
