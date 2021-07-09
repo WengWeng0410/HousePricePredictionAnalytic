@@ -137,4 +137,37 @@ Given the same zipcode, the better the condition, grade and view of a house, the
 Suprisingly, houses built before year 2000 are with better condition. Besides, the many houses that are built after 1980 are of better quality.
 As for the view of the houses, the better the view, the higher the selling price regardless of the year built of the houses.
 
+### Summary of the rest of features
+As for id, sqft_lot, sqft_lot15 and date, all these features did not have significant relationship with the selling price. Hence, they will not be considered for the machine learning model in the next section. 
+
+## Model Building
+
+In this section, three models with different methods that can make a prediction are developed. This is with the aim of identifying which model can performance the best. It should be noted that R-squared will be used as the performance metric to measure the performance of the developed models. 
+
+Other than that, certain features are also preprocessed before feeding as input to the models, as follows
+
+* MixMaxScaler from sklearn.preprocessing is used to scale values of 'price','sqft_living','sqft_basement','sqft_above', 'sqft_living15', 'lat', 'long' into rage of 0 to 1. Reason being this feature is measured at different scale and do not contribute equally in model training and may ended with creating a bias.
+* train_test_split from sklearn.model_selection is also used to separat the dataset into training and testing set of data. In this project, 80% of the dataset is used as training set and the remaining 20% is used as testing set.
+
+Three models have been selected:
+* LinearRegression
+* RandomForestRegressor
+* XGBRegressor
+
+## Performane Evaluation
+
+For LinearRegression: <br>
+Coefficients [basement,sqft_living,grade, sqft_above, sqft_living15,bathrooms,view,lat,waterfront,yr_built,bedrooms,renovated,long,zipcode,condition] and Intercept produced by the model. <br>
+
+Coefficients: [  259.83736925   322.61300185 23827.39344353]<br>
+Intercept: -11691.638457668056 <br>
+
+From the coefficient, it can be seen that encoded_smoker is with the highest weight in determining the medical cost (charges) of a patient. <br> 
+
+Based on the result, the performance of <br> 
+Linear Regression is with the R_ Square score of **69.13%**. <br>
+Random Forest Regressor is with the R_ Square score of **88.80%**. <br>
+XGBoost Regressor is with the R_ Square score of **89.27%**.
+
+
 
