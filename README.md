@@ -156,7 +156,7 @@ Three models have been selected:
 
 ## Performane Evaluation
 
-Based on the result, the performance of <br> 
+The results produced by the models and features are as follows: <br> 
 Linear Regression is with the R_ Square score of **69.13%**. <br>
 Random Forest Regressor is with the R_ Square score of **88.80%**. <br>
 XGBoost Regressor is with the R_ Square score of **89.27%**. <br>
