@@ -44,3 +44,97 @@ The dataset used in this project can be downloaded from Kaggle (link as shown ab
 * long - Longitude
 * sqft_living15 - The square footage of interior housing living space for the nearest 15 neighbors
 * sqft_lot15 - The square footage of the land lots of the nearest 15 neighbors
+
+## EDA
+
+In this section, exploratory analysis on the dataset will be carried out to get some observations/insights.
+
+Other than that, certain features are also preprocessed to better understand the dataset and prepare for the machine learning model training. The preprocessed features as follows
+
+* Two houses with more than 10 bedrooms. As for the house with 33 bedrooms, it has only 1 floor and basement. Besides, the sqft living is also small (only 1620 as compared to 3000 for the house with 11 bedroom) which is not likely to have 33 bedrooms. Hence, the record with 33 bedroom is considered as outliner and removed.
+* The yr_renovated feature (storing year of renovation) is preproccessed in order to identify if renovation has been done (Yes/No).
+* The sqft_basement feature (storing are of basement) is preprocessed in order to to identify if a house has a basement (Yes/No)
+
+#### Sqft of Living (with Different Number of Bedrooms) vs House Price
+![](/images/1.HSP_bedroom.png)
+
+Data shows that the houses sold between 2014 - 2015 are mostly with 2 - 4 bedrooms. Besides, it shows that houses with more bedrooms are wih bigger size on sqft living and able to sell at a higher price.
+
+#### Sqft of Living (with Different Number of Floors) vs House Price
+![](/images/2.HSP_floors.png)
+
+Data shows that the houses sold between 2014 - 2015 are mostly in between 1 - 2 floors. Besides, there is no significant finding on the house price with respect to the number of floors.
+
+#### Sqft of Living (with and without Renovation) vs House Price
+![](/images/3.HSP_renovation.png)
+
+#### Houses with Renovation vs Year Renovation
+![](/images/4.HSP_renovationYear.png)
+
+It can be seen that, most of the houses are not renovated (20699 units). There are only 914 houses renovated. It is noted that there are more houses renovated since 1979 and the year with highest number of house renovated is 2014.
+Also, houses with renovation are able to sell with a higher price.
+
+#### Sqft of Living (with and without Waterfront) vs House Price
+![](/images/5.HSP_waterfront.png)
+
+There are only 163 houses (out of 21613) with waterfront. In fact, the houses with waterfront are able to sell in a higher price.
+
+#### Sqft of Living (with and without View) vs House Price
+![](/images/6.HSP_view.png)
+
+Data shows that most of the houses are with poor view. Also, it is noted that houses with better view are able to sell at a higher price.
+
+#### Sqft of Living (with Different Grade) vs House Price
+![](/images/7.HSP_grade.png)
+
+Data shows that houses built are mostly rate 7 and above. Besides, it also shows that houses with high sqft living are with better grade of construction and design. Thus, the higher the selling price.
+
+#### Sqft of Living (with Different Number of Bathrooms) vs House Price
+![](/images/8.HSP_bathroom.png)
+
+Most of the houses are with 1 - 3 full bathrooms. Besides, the houses with more bathrooms are with higher selling price.
+
+#### Sqft of Living (with Different Condition) vs House Price
+![](/images/9.HSP_condition.png)
+
+Data shows that houses with better rating on the condition are able to sell at a higher prices, given the same sqft of living. Also, most of the houses are rated at least 3 and above.
+
+#### Sqft of Living of Nearest 15 Neighbor (with and without View) vs House Price
+![](/images/10.HSP_neighbor_view.png)
+
+Data shows that the higher the sqft living of 15 neighbors, the higher the selling price of a house.
+
+#### Sqft of Living and Sqft Basement (with and without Basement) vs House Price
+![](/images/11.HSP_sqlivingVSbasement.png)
+
+Data shows that houses with higher sqft living are more likely to have a basement, thus higher the houses prices. Besides, houses with basement are with higher prices, given the same sqft above the ground.
+
+#### Latitude and Longitude of Houses (with and without Basement) vs House Price
+![](/images/12.HSP_latVSlong(basement).png)
+
+#### Latitude and Longitude (with Different Grade) vs House Price
+![](/images/13.HSP_latVSlong(grade).png)
+
+#### Latitude and Longitude of Houses (with Different View) vs House Price
+![](/images/14.HSP_latVSlong(view).png)
+
+#### Latitude and Longitude of Houses (with and without Waterfront) vs House Price
+![](/images/15.HSP_latVSlong(waterfront).png)
+
+#### Latitude and Longitude of Houses (with Different Condition) vs House Price
+![](/images/16.HSP_latVSlong(condition).png)
+
+Data shows that houses that are located at latitude of 47.5 to 47.8 and longitude of -122.4 to -122 are with higher prices, better grade (level of construction and design), view and condition of the properties, and with waterfront and basement.
+
+#### Zipcode of Houses vs House Price
+![](/images/17.HSP_zipcode.png)
+
+Given the same zipcode, the better the condition, grade and view of a house, the higher the selling price.
+
+#### Year Build of Houses vs House Price
+![](/images/18.HSP_yrbuilt.png)
+
+Suprisingly, houses built before year 2000 are with better condition. Besides, the many houses that are built after 1980 are of better quality.
+As for the view of the houses, the better the view, the higher the selling price regardless of the year built of the houses.
+
+
